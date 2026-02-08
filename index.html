@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nguyễn Xuân Thạnh | 12A1 - Tây Sơn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 80px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 0 0 30px 30px;
+      position: relative;
+    }
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255, 221, 89, 0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+      transition: all 0.4s;
+    }
+    .avatar:hover {
+      transform: scale(1.1);
+      border-color: #ffdd59;
+    }
+    header h1 {
+      font-size: 3.8rem;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.95;
+    }
+    .birthdate {
+      font-size: 1.4rem;
+      margin: 15px 0 10px;
+    }
+    .motto {
+      font-size: 1.35rem;
+      font-style: italic;
+      color: #ffdd59;
+      margin-top: 15px;
+      line-height: 1.5;
+      padding: 0 20px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    section {
+      margin: 60px 0;
+      padding: 40px 30px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ffdd59;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 15px;
+      transition: all 0.35s;
+    }
+    .card:hover {
+      transform: translateY(-12px) scale(1.05);
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .hobby-extra {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .hobby-extra strong {
+      color: #ffdd59;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255,255,255,0.4);
+      transition: all 0.4s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .gallery img:hover {
+      transform: scale(1.08) rotate(3deg);
+      border-color: #ffdd59;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+    .gallery-desc {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .gallery-desc strong {
+      color: #ffdd59;
+    }
+    .contact {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 30px 30px 0 0;
+      margin-top: 80px;
+    }
+    .contact a {
+      color: #74b9ff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+    .contact a:hover {
+      color: #ffdd59;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.5);
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      header { padding: 80px 20px 60px; }
+      .avatar { width: 140px; height: 140px; }
+      header h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .motto { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/QFY5gFLr/file-0000000029407206b6bac1de0243d21a.png" alt="Nguyễn Xuân Thạnh - Avatar" class="avatar">
+    <h1>Nguyễn Xuân Thạnh</h1>
+    <p>Lớp 12A1 - Trường THPT Tây Sơn</p>
+    <p class="birthdate">20 / 06 / 2008</p>
+    <div class="motto">
+      "Đừng chọn an nhàn khi còn có thể cố gắng. Thành công chỉ đến với người biết nắm bắt cơ hội."
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>Vài nét về mình</h2>
+      <div class="info-grid">
+        <div class="card">
+          <h3>Ưu điểm</h3>
+          <p>Tích cực, ham học hỏi, nhiệt tình giúp đỡ bạn bè, có trách nhiệm với công việc được giao, khá sáng tạo.</p>
+        </div>
+        <div class="card">
+          <h3>Nhược điểm</h3>
+          <p>Đôi khi còn hơi cầu toàn, hay thức khuya, ngại giao tiếp, Dễ bị ảnh hưởng tiêu cực bởi những lời nhận xét nhỏ xung quanh.</p>
+        </div>
+        <div class="card">
+          <h3>Sở thích</h3>
+          <p>Chơi game • Đọc sách • Nghe nhạc • Xem phim • Xem hoạt hình anime</p>
+          <div class="hobby-extra">
+            <strong>Bài hát yêu thích:</strong> Quẻ bói<br>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/1ZkpLF8QJQk" 
+                      title="Quẻ bói - Thôi Tử Cách" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen></iframe>
+            </div>
+
+            <strong>Bộ phim yêu thích:</strong> Thám tử lừng danh Conan<br>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/3Eii6-UYNs8" 
+                      title="Thám tử lừng danh Conan Trailer" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="future">
+      <h2>Ước mơ tương lai</h2>
+      <p style="text-align:center; font-size:1.3rem; line-height:1.8;">
+        Mình mong thi đỗ thật tốt vào một trường đại học hàng đầu để theo đuổi đam mê.<br>
+        Trường mình hướng tới là <strong><a href="https://neu.edu.vn/" target="_blank" style="color:#ffdd59;">Đại học Kinh tế Quốc dân (NEU)</a></strong> – một trong những trường top về kinh tế và tài chính tại Việt Nam.<br>
+        Ngành mình muốn học là <strong>Tài chính Ngân hàng</strong> – ngành học về quản lý tiền tệ, đầu tư, ngân hàng, phân tích tài chính… rất thú vị và có nhiều cơ hội việc làm.<br>
+        Tìm hiểu thêm về ngành <a href="https://tuyensinh.uel.edu.vn/nganh-tai-chinh-ngan-hang-la-gi" target="_blank" style="color:#ffdd59;">tại đây</a> nhé!
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>🎞️ 12A1 - THANH XUÂN RỰC RỠ</h2>
+      <div class="gallery-desc">
+        <p>"Người ta nói thanh xuân giống như một cơn mưa rào, dù có bị cảm lạnh bạn vẫn muốn đắm mình trong đó một lần nữa. Với tôi, cơn mưa ấy mang tên 12A1."</p>
+        <br>
+        <p><strong>🌍 Những Bước Chân Trưởng Thành</strong><br>
+        Thanh xuân của chúng tôi không chỉ gói gọn trong bốn bức tường lớp học và bảng đen phấn trắng. Đó là những hành trình rực rỡ nắng vàng tại Quy Nhơn, là phút giây cùng nhau khám phá vũ trụ tại Explorascience, hay những trải nghiệm lắng đọng tại mảnh đất Gia Lai hùng vĩ. Dưới sự dẫn dắt tận tâm của Thầy, mỗi chuyến đi hướng nghiệp không chỉ giúp chúng tôi nhìn thấy tương lai, mà còn giúp chúng tôi nhìn thấy nhau – những người đồng đội sẽ cùng nhau vượt qua kỳ thi vũ môn sắp tới. Mỗi km hành trình là một trang kỷ niệm được viết bằng tiếng cười và sự đoàn kết của 45 trái tim chung nhịp đập.</p>
+        <br>
+        <p><strong>🏐 Sát Cánh Bên Nhau Trên Sân Đấu</strong><br>
+        Nhớ làm sao những ngày hội thể thao trường, cả tập thể 12A1 cùng nhau cháy hết mình trong từng bộ môn. Hạnh phúc nhất không chỉ là khi giành chiến thắng, mà là khoảnh khắc chúng tôi đứng sát cánh bên nhau nơi đường biên, hò hét khản cổ những tiếng "CỐ LÊN!" để tiếp thêm sức mạnh cho bạn mình đang thi đấu.<br>
+        Trong những trận bóng chuyền kịch tính, mỗi nhịp bật nhảy, mỗi cú đập bóng hay những pha cứu bóng lăn xả đều đong đầy niềm tin dành cho đồng đội. Chúng tôi học được rằng, dù kết quả có ra sao, chỉ cần tiếng cổ vũ của 12A1 vẫn vang lên, thì chúng tôi sẽ không bao giờ bỏ cuộc. Đó chính là tinh thần thép và sự gắn kết không gì có thể thay thế được.</p>
+        <br>
+        <p><strong>🎁 Nơi Gói Ghém Những Yêu Thương</strong><br>
+        Có một 12A1 rất quyết liệt trên sân đấu, nhưng cũng có một 12A1 thật dịu dàng trong những ngày lễ kỷ niệm. Những món quà nhỏ trao tay, những đóa hoa tươi thắm dành tặng Thầy Cô và bạn bè... đó là những khoảnh khắc chúng tôi học cách yêu thương và biết ơn. Dưới mái trường THPT Tây Sơn, lớp học 12A1 đã trở thành "nhà", nơi mà mỗi thành viên đều là một mảnh ghép quan trọng tạo nên một bức tranh hoàn mỹ.</p>
+        <br>
+        <p><strong>✨ Lời Hứa Cho Tương Lai</strong><br>
+        Dù mai này mỗi người một phương trời, dù ngành Tài chính Ngân hàng hay bất cứ ước mơ nào gọi tên chúng ta, thì ký ức về những ngày tháng "nhất quỷ nhì ma" này sẽ luôn là điểm tựa vững chắc nhất.<br>
+        12A1 - Chúng ta không chỉ là một lớp học, chúng ta là một gia đình.</p>
+      </div>
+
+      <div class="gallery">
+        <img src="https://i.ibb.co/m57mQ68S/IMG-8604-HEIC.avif" alt="12A1 - Ảnh 1">
+        <img src="https://i.ibb.co/TM6M2Cq3/IMG-8735-HEIC.avif" alt="12A1 - Ảnh 2">
+        <img src="https://i.ibb.co/DHzJ16zN/IMG-8764-HEIC.avif" alt="12A1 - Ảnh 3">
+        <img src="https://i.ibb.co/chcRW1rp/IMG-8786-HEIC.avif" alt="12A1 - Ảnh 4">
+        <img src="https://i.ibb.co/27NKRmLv/IMG-20251103-113610.jpg" alt="12A1 - Ảnh 5">
+        <img src="https://i.ibb.co/LzycwnCs/IMG-20251103-113734.jpg" alt="12A1 - Ảnh 6">
+      </div>
+    </section>
+
+  </div>
+
+  <div class="contact">
+    <h2>Liên hệ với mình nhé!</h2>
+    <p>
+      <strong>Facebook:</strong> <a href="https://www.facebook.com/share/1KUthKDSuK/" target="_blank">facebook.com/share/1KUthKDSuK/</a><br><br>
+      <strong>Số điện thoại:</strong> 0798093758<br>
+      <strong>Email:</strong> thanhxuannguyen2468@gmail.com
+    </p>
+  </div>
+
+  <footer>
+    © 2026 Nguyễn Xuân Thạnh | Made with ❤️ & năng lượng tuổi 17
+  </footer>
+
+</body>
+</html>
